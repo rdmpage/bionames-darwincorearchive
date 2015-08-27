@@ -6,17 +6,19 @@
     </files>
     <id index="0"/>
     <field index="0" term="http://rs.tdwg.org/dwc/terms/taxonID"/>
-    <field index="1" term="http://rs.tdwg.org/dwc/terms/scientificNameID"/>
-    <field index="2" term="http://rs.tdwg.org/dwc/terms/scientificName"/>
-    <field index="3" term="http://rs.tdwg.org/dwc/terms/scientificNameAuthorship"/>
-    <field index="4" term="http://rs.tdwg.org/dwc/terms/taxonRank"/>
-    <field index="5" term="http://rs.tdwg.org/ontology/voc/TaxonName#uninomial"/>
-    <field index="6" term="http://rs.tdwg.org/ontology/voc/TaxonName#genusPart"/>
-    <field index="7" term="http://rs.tdwg.org/ontology/voc/TaxonName#infragenericEpithet"/>
-    <field index="8" term="http://rs.tdwg.org/ontology/voc/TaxonName#specificEpithet"/>
-    <field index="9" term="http://rs.tdwg.org/ontology/voc/TaxonName#infraspecificEpithet"/>
-    <field index="10" term="http://rs.tdwg.org/dwc/terms/nomenclaturalCode"/>
-    <field index="11" term="http://rs.tdwg.org/dwc/terms/higherClassification"/>
+    <field index="1" term="http://purl.org/dc/terms/references"/>
+    <field index="2" term="http://rs.tdwg.org/dwc/terms/scientificNameID"/>
+    <field index="3" term="http://rs.tdwg.org/dwc/terms/scientificName"/>
+    <field index="4" term="http://rs.tdwg.org/dwc/terms/scientificNameAuthorship"/>
+    <field index="5" term="http://rs.tdwg.org/dwc/terms/taxonRank"/>
+    <field index="6" term="http://rs.tdwg.org/ontology/voc/TaxonName#uninomial"/>
+    <field index="7" term="http://rs.tdwg.org/ontology/voc/TaxonName#genusPart"/>
+    <field index="8" term="http://rs.tdwg.org/ontology/voc/TaxonName#infragenericEpithet"/>
+    <field index="9" term="http://rs.tdwg.org/ontology/voc/TaxonName#specificEpithet"/>
+    <field index="10" term="http://rs.tdwg.org/ontology/voc/TaxonName#infraspecificEpithet"/>
+    <field index="11" term="http://rs.tdwg.org/dwc/terms/nomenclaturalCode"/>
+    <field index="12" term="http://rs.tdwg.org/dwc/terms/higherClassification"/>
+    <field index="13" term="http://rs.tdwg.org/dwc/terms/namePublishedInID"/>
   </core>
   <extension encoding="UTF-8" fieldsTerminatedBy="\t" linesTerminatedBy="\n" ignoreHeaderLines="1" rowType="http://eol.org/schema/reference/Reference">
     <files>

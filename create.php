@@ -14,6 +14,7 @@ fclose($file_handle);
 //--------------------------------------------------------------------------------------------------
 $taxon_fields = array(
 	'taxonID' 				=> 'http://rs.tdwg.org/dwc/terms/taxonID',
+	'references' 			=> 'http://purl.org/dc/terms/references',
 	'scientificNameID' 		=> 'http://rs.tdwg.org/dwc/terms/scientificNameID',
 	'scientificName' 		=> 'http://rs.tdwg.org/dwc/terms/scientificName',
 	'scientificNameAuthorship' => 'http://rs.tdwg.org/dwc/terms/scientificNameAuthorship',
@@ -26,7 +27,9 @@ $taxon_fields = array(
 	'infraspecificEpithet' 	=> 'http://rs.tdwg.org/ontology/voc/TaxonName#infraspecificEpithet',
 
 	'nomenclaturalCode' 	=> 'http://rs.tdwg.org/dwc/terms/nomenclaturalCode',
-	'higherClassification' 	=> 'http://rs.tdwg.org/dwc/terms/higherClassification'
+	'higherClassification' 	=> 'http://rs.tdwg.org/dwc/terms/higherClassification',
+
+	'namePublishedInID' 	=> 'http://rs.tdwg.org/dwc/terms/namePublishedInID'
 );
 
 file_put_contents($taxa_filename, join("\t", array_keys($taxon_fields)) . "\n");
@@ -146,13 +149,23 @@ while (!$done)
 		// adjust array
 		$values = explode("\t", $row->value);
 		
-		// remove reference
-		array_pop($values);
-		
-		// add LSID
+		//Add LSID
 		array_unshift($values, $row->key);
 		
-		file_put_contents($taxa_filename, $core_id . "\t" . join("\t", $values) . "\n", FILE_APPEND);
+		// remove reference
+		//array_pop($values);
+		
+		$n = count($values);
+		$namePublishedInID = $values[$n-1];
+		if ($namePublishedInID != '')
+		{
+			$namePublishedInID = 'http://bionames.org/references/' . $namePublishedInID;
+			$values[$n-1] = $namePublishedInID;
+		}
+		
+				
+		
+		file_put_contents($taxa_filename, $core_id . "\t" . $core_id . "\t" . join("\t", $values) . "\n", FILE_APPEND);
 		//echo $row->key . "\t" . $row->value . "\n";
 		
 		// reference
