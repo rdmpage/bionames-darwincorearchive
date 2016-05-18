@@ -202,8 +202,10 @@ while (!$done)
 	$skip = $page * $rows_per_page; // == 10 for the first page, 20 for the second ...	
 	
 	echo '[' . $skip . '(' . count($obj->rows) . ')]';
-	$done = ($skip > 1000);
+	//$done = ($skip > 1000);
 }
+
+echo "\n\nDone!\n";
 
 
 ?>

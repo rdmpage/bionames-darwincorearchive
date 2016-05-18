@@ -80,6 +80,8 @@ function export_reference($reference)
 		$values[$map[$k]] = '';
 	}
 	
+	$uri = '';
+	
 	foreach ($reference as $k => $v)
 	{
 		switch ($k)
